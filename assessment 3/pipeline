@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main',
+                     url: 'https://github.com/vigneshwaran21-vicky/maven-jenkins-demo.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'mvn compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                bat 'mvn clean install'
+            }
+        }
+    }
+}
