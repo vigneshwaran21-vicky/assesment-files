@@ -1,0 +1,10 @@
+🛠️ Core Maven Commands
+mvn compile — Compile: Compiles the source code of the project.
+mvn test — Run Tests: Runs the unit tests using a suitable testing framework (like JUnit).
+mvn clean install — Build: Clears the target folder and builds the project, adding the resulting JAR/WAR to your local repository.
+🔍 Specialized Build Commands
+If you need more specific control over the build process:
+mvn package — Generates the JAR/WAR file in the target directory without installing it to the local repo.
+mvn clean — Deletes the target directory, ensuring your next build starts from scratch.
+mvn test-compile — Compiles the test source code without running the tests.
+mvn -DskipTests clean install — Builds the project while skipping the test execution phase.
