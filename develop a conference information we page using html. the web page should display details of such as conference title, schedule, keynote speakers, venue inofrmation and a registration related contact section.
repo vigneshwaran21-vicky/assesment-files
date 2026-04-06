@@ -1,1 +1,209 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tech Connect 2026</title>
+    <style>
+        :root {
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: var(--light);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+
+        /* Schedule Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Speaker Cards */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .venue-box {
+            background: #fff;
+            padding: 25px;
+            border-left: 5px solid var(--primary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Global Tech Connect 2026</h1>
+        <p>Innovating the Future | Oct 15-17, 2026</p>
+    </header>
+
+    <nav>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#venue">Venue</a>
+        <a href="#contact">Contact & Registration</a>
+    </nav>
+
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Session Title</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Opening Keynote: The AI Revolution</td>
+                    <td>Main Hall</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Breakout: Cybersecurity in 2026</td>
+                    <td>Room B</td>
+                </tr>
+                <tr>
+                    <td>01:00 PM</td>
+                    <td>Networking Lunch</td>
+                    <td>Garden Court</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="speakers">
+        <h2>Keynote Speakers</h2>
+        <div class="speakers-grid">
+            <div class="card">
+                <h3>Dr. Sarah Chen</h3>
+                <p><strong>Chief Scientist, AI Labs</strong></p>
+                <p>Topic: Neural Networks & Society</p>
+            </div>
+            <div class="card">
+                <h3>Marcus Vane</h3>
+                <p><strong>CEO, GreenTech Solutions</strong></p>
+                <p>Topic: Sustainable Hardware Design</p>
+            </div>
+            <div class="card">
+                <h3>Elena Rodriguez</h3>
+                <p><strong>Lead Engineer, SpaceX</strong></p>
+                <p>Topic: Multi-planetary Connectivity</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="venue">
+        <h2>Venue Information</h2>
+        <div class="venue-box">
+            <h3>Grand Plaza Convention Center</h3>
+            <p>123 Innovation Way, San Francisco, CA</p>
+            <p><strong>Parking:</strong> Free on-site parking for all registered attendees.</p>
+            <p><strong>Accommodation:</strong> Discounted rates available at the Hilton Plaza nearby.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Registration & Contact</h2>
+        <p>Ready to join us? Secure your spot today to take advantage of early bird pricing.</p>
+        <a href="mailto:registration@techconnect.com" class="btn">Email Registration Team</a>
+        <div style="margin-top: 30px;">
+            <p><strong>General Inquiries:</strong> info@techconnect.com</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Global Tech Connect. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
