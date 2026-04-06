@@ -1,0 +1,68 @@
+package com.example;
+
+public class App {
+    public static class AttendanceResult {
+        public double percentage;
+        public boolean isEligible;
+        public String status;
+
+        public AttendanceResult(double percentage, boolean isEligible, String status) {
+            this.percentage = percentage;
+            this.isEligible = isEligible;
+            this.status = status;
+        }
+    }
+
+    public static AttendanceResult analyze(int attended, int total) {
+        if (total <= 0) {
+            return new AttendanceResult(0.0, false, "Invalid Total Classes");
+        }
+        
+        double pct = (double) attended / total * 100;
+        boolean eligible = pct >= 75.0;
+        String warning = eligible ? "Eligible" : "WARNING: Attendance below 75%";
+        
+        return new AttendanceResult(Math.round(pct * 100.0) / 100.0, eligible, warning);
+    }
+
+    public static void main(String[] args) {
+        AttendanceResult res = analyze(48, 60);
+        System.out.println("Attendance: " + res.percentage + "% - " + res.status);
+    }
+}
+
+
+
+
+
+
+package com.example;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class AppTest {
+
+    @Test
+    public void testEligibleAttendance() {
+        App.AttendanceResult result = App.analyze(80, 100);
+        assertEquals(80.0, result.percentage);
+        assertTrue(result.isEligible);
+        assertEquals("Eligible", result.status);
+    }
+
+    @Test
+    public void testWarningStatus() {
+        App.AttendanceResult result = App.analyze(50, 100);
+        assertEquals(50.0, result.percentage);
+        assertFalse(result.isEligible);
+        assertTrue(result.status.contains("WARNING"));
+    }
+
+    @Test
+    public void testBoundaryCondition() {
+        // Exactly 75% should be eligible
+        App.AttendanceResult result = App.analyze(75, 100);
+        assertTrue(result.isEligible);
+    }
+}
