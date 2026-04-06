@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Resume</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vigneshwaran T</h1>
+        <p><b>Email:</b> vignesh@example.com</p>
+        <p><b>Phone:</b> 9876543210</p>
+
+        <h2>Career Objective</h2>
+        <p>To become a skilled software engineer and DevOps engineer.</p>
+
+        <h2>Education</h2>
+        <p>M.Tech Integrated Software Engineering - VIT</p>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS</li>
+            <li>Python</li>
+            <li>Docker, Kubernetes</li>
+        </ul>
+    </div>
+</body>
+</html>
