@@ -1,0 +1,23 @@
+num = int(input("Enter a number: "))
+
+# Odd or Even
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+# Sum of digits
+temp = num
+sum_digits = 0
+while temp > 0:
+    sum_digits += temp % 10
+    temp //= 10
+print("Sum of digits:", sum_digits)
+
+# Reverse number
+temp = num
+reverse = 0
+while temp > 0:
+    reverse = reverse * 10 + (temp % 10)
+    temp //= 10
+print("Reversed number:", reverse)
